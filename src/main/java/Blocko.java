@@ -29,7 +29,8 @@ public class Blocko implements ActionListener{
 	//Frame size: width=730   ,  height = 310
 	Dimension dim = Toolkit.getDefaultToolkit().getScreenSize(); 
 	final int frame_width = 730; 
-	final int frame_height = 310;
+	final int frame_height = 320;
+        //test to see if github is uploading correctly
 	
 	//Integer Array carrying all high scores
 	static int[] highScores= new int[5];
