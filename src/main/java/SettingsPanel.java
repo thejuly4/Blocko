@@ -171,9 +171,9 @@ public class SettingsPanel extends JPanel implements MouseListener, ActionListen
 		}
 		
 	}
-	
-	
-	
+        
+
+        
 	public void actionPerformed(ActionEvent e){
 		this.repaint(); 
 	}

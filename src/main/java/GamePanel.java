@@ -269,7 +269,7 @@ public class GamePanel extends JPanel implements ActionListener, MouseListener, 
 			else if(pQuitBounds.contains(point)){
 				System.out.println("Quit Clicked");
 				PDevPanel.uiClick.play();
-				System.exit(1);
+				System.exit(0);
 			}
 		}
 		
@@ -729,6 +729,7 @@ public class GamePanel extends JPanel implements ActionListener, MouseListener, 
 					else if(e.getKeyCode() == 37 || e.getKeyCode() == 65)
 					{
 						System.out.println("Left Arrow/A pressed");
+                                                PDevPanel.title.changeVolume(1);
 						//if(gamePaused == false)
 							//theblock.rotate();
 							//holdBlock();
@@ -741,6 +742,7 @@ public class GamePanel extends JPanel implements ActionListener, MouseListener, 
 					else if(e.getKeyCode() == 39 )
 					{
 						//System.out.println("Right Arrow/D pressed");
+                                                PDevPanel.title.changeVolume(2);
 						if(gamePaused == false && TitlePanel.gpStart == true ){
 							timerDelay = 15; 
 							gClock.setDelay(timerDelay);
