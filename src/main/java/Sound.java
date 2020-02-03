@@ -62,11 +62,13 @@ public class Sound {
     
     public void changeVolume(int i){
         //if i==1, then decrease volume
-        if(i==1){
+        if(i==1 && gain.getValue() > (-78.0) )
+        {
             gain.setValue(gain.getValue()-2.0f); // Reduce volume by 2 decibels.
             System.out.println(gain.getValue());
         }
-        else if(i==2){
+        else if(i==2 && gain.getValue() < 4.0)
+        {
             gain.setValue(gain.getValue()+2.0f); // Increase volume by 2 decibels.
             System.out.println(gain.getValue());
         }
