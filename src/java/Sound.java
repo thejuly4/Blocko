@@ -1,15 +1,11 @@
-
-
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import javax.sound.sampled.*;
 
-
 public class Sound {
     private Clip clip;
     FloatControl gain;
-                
     
     public Sound(String fileName) {
        
@@ -40,6 +36,9 @@ public class Sound {
         catch (LineUnavailableException e) {
             e.printStackTrace();
             throw new RuntimeException("Sound: Line Unavailable Exception Error: " + e);
+        }
+        finally {
+            System.out.println(fileName + " loaded successfully");
         }
 
     }
@@ -73,6 +72,5 @@ public class Sound {
             System.out.println(gain.getValue());
         }
     }
-    
     
 }

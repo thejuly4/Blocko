@@ -1,5 +1,3 @@
-
-
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -13,9 +11,6 @@ import javax.swing.Timer;
 //Panel that handles everything on the Tutorial Screen
 public class TutorialPanel extends JPanel implements MouseListener, ActionListener {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	//Creating the Background image object  
@@ -30,9 +25,7 @@ public class TutorialPanel extends JPanel implements MouseListener, ActionListen
 	Point point; 
 	
 	Timer tClock; 
-	
-	
-	
+
 	public TutorialPanel(){
 		
 		tClock = new Timer(1,this); 
@@ -40,13 +33,11 @@ public class TutorialPanel extends JPanel implements MouseListener, ActionListen
 		
 		//Giving the point object some parameters
 		point = new Point(0,0); 
-		
-		
+
 		//Adding the mouselistener to the panel and setting the size of it
 		addMouseListener(this);
 		setSize(730,300);
 	}
-	
 	
 	//MouseListener Functions --------------------------------------------------
 	public void mouseClicked(MouseEvent e) {
@@ -57,7 +48,6 @@ public class TutorialPanel extends JPanel implements MouseListener, ActionListen
 			//Adds the titlePanel onto the frame, removes the current panel, and validates frame
 			System.out.println("Back Clicked");
 			PDevPanel.uiClick.play();
-			
 			
 			backClicked = true; 
 		}
@@ -77,14 +67,11 @@ public class TutorialPanel extends JPanel implements MouseListener, ActionListen
 		//System.out.println("The left mouse button was released.");
 	}
 	
-	
 	//ActionPerformed method called by the timer
 	public void actionPerformed(ActionEvent e){
 		this.repaint(); 
 	}
-	
-	
-	
+
 	//Paint Method that gets called in actionPerformed method   
 	public void paint(Graphics g){
 		
@@ -92,8 +79,7 @@ public class TutorialPanel extends JPanel implements MouseListener, ActionListen
 		prepareImage(bImage, this); 
 		//Draw the background image
 		g.drawImage(bbImage, 0, 0, null);
-		
-		
+
 		//Prepare the Tutorial screen image
 		bImage = Toolkit.getDefaultToolkit().getImage("src/tutScreen.gif");
 		prepareImage(bImage, this); 
@@ -113,15 +99,9 @@ public class TutorialPanel extends JPanel implements MouseListener, ActionListen
 			}
 			
 		}
-		
-		
-		
-		
-		
+
 		//Rectangle used for the back button
 		//g.fillRect(6,5,55,25);
-		
-		
+
 	}
-	
 }
